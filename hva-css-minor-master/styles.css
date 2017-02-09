@@ -1,0 +1,184 @@
+/* Food#1: #E9D758 #297373 #FF8552 #F3F3F3 #39393A */
+@font-face {
+    font-family: 'AniTypewriter';
+    src: url('../font/AniTypewriter.ttf');
+    src: local('AniTypewriter');
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: darkkhaki;
+    background-color: #E9D758;
+    color: black;
+    color: #39393A;
+    /*display: flex;
+    flex-direction: column;*/
+    font-family: Helvetica, sans-serif;
+}
+
+body, nav a {
+    color: black;
+    color: #39393A;
+    font-size: 80%;
+}
+
+h1 {
+    background-color: black;
+    background-color: #39393A;
+    color: white;
+    font-family: 'AniTypeWriter';
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+}
+
+nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset {
+    padding: 5%; 
+}
+
+ol, ul {
+    list-style: none;
+}
+
+form {
+    display: flex;
+}
+
+ol + form {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    bottom : 0;
+    flex-direction: row;
+    padding: 1em;
+    position : fixed;
+    width: 100%;
+}
+
+ol li {
+    padding: 0 0 2em 0;
+}
+
+ol li:nth-of-type(2n) {
+    text-align: right;
+}
+
+li > p {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    display:inline-block;
+    padding: 0.6em;
+}
+
+li > footer {
+    font-size: 70%;
+    font-style: italic;
+    padding: 1em 0 0 0;
+}
+
+label[for="field-message"] {
+    display: none;
+}
+
+li > p, textarea, button, input {
+    border-radius: 0.5em;
+}
+
+fieldset, textarea {
+    border: none;
+}
+
+textarea {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 80%;
+}
+
+button {
+    background-color: #297373;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: white;
+    font-family: 'AniTypeWriter';
+    font-size: 110%;
+    padding: 0.4em;
+    width: 20%;
+}
+
+input[type="email"], input[type="password"], a + button, a {
+    margin: 0.5em 0 0.5em 0;
+}
+
+nav a {
+    font-size: 130%;
+    text-decoration: none;
+}
+
+nav a {
+    border-bottom: 1px dashed #39393A;
+    display: block;
+    padding: 0.3em 0 0.3em 0;
+}
+
+a {
+    color: orange;
+    color: #FF8552;
+}
+
+a:visited {
+    color: orange;
+    color: #FF8552;
+}
+
+/*a:hover {
+    color: black;
+    color: #39393A;
+}*/
+
+a + button {
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    width: 100%;
+}
+
+h1 + form:nth-of-type(1) {
+    flex-direction: column;
+}
+
+input[type="email"], input[type="password"] {
+    border: none;
+    border-radius: 0.5em;
+    height: 2.2em;
+}
+
+label[for="field-stay-logged-in"]{
+    display: inline;
+}
+
+li ul li {
+    padding-left: 1em;
+}
+
+article {
+    width: min-content;
+} 
+
+img[alt="A drawing of a colorful monster on a newspaper"]{
+    width: 100vw;
+}
+
+svg {
+    width: 1em;
+}
+
+fieldset {
+    background-color: white;
+    margin: 1em;
+}
+
+legend {
+    padding-bottom: 2em;
+}
