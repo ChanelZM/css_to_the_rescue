@@ -10,64 +10,91 @@
     padding: 0;
 }
 
-body {
-    background-color: darkkhaki;
-    background-color: #E9D758;
-    color: black;
-    color: #39393A;
-    /*display: flex;
-    flex-direction: column;*/
-    font-family: Helvetica, sans-serif;
+nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset, nav ol li, ol + form {
+    padding: 1em; 
 }
 
-body, nav a {
+li > p, textarea, button, input, fieldset, label[for^="rating-"], nav ol li {
+    border-radius: 0.5em;
+}
+
+fieldset, textarea, button, nav ol li a {
+    border: none;
+}
+
+body, nav a, legend {
     color: black;
     color: #39393A;
+}
+
+input[type="email"], input[type="password"], a + button, a {
+    margin: 0.5em 0 0.5em 0;
+}
+
+input[type="email"], input[type="password"] {
+    border: none;
+    border-radius: 0.5em;
+    height: 2.2em;
+}
+
+body, body > ol a {
     font-size: 80%;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+h1, button {
+    color: white;
+}
+
+h1, legend {
+    font-family: 'AniTypeWriter', serif;
+    font-size: 1.5rem;
+}
+
+ol + form, li > p, label[for^="rating-"], nav ol li {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+}
+
+/*body >*/ ol, ul {
+    list-style: none;
+}
+
+body > ol li {
+    padding: 0 0 2em 0;
+}
+
+ol + form {
+    bottom : 0;
+    flex-direction: row;
+    position : fixed;
+    width: 100%;
+}
+
+body > ol li:nth-of-type(2n) {
+    text-align: right;
 }
 
 h1 {
     background-color: black;
     background-color: #39393A;
-    color: white;
-    font-family: 'AniTypeWriter';
-    font-size: 1.5rem;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
 }
 
-nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset {
-    padding: 5%; 
-}
-
-ol, ul {
-    list-style: none;
+body {
+    background-color: darkkhaki;
+    background-color: #E9D758;
+    font-family: Helvetica, sans-serif;
 }
 
 form {
     display: flex;
 }
 
-ol + form {
-    background-color: lightgray;
-    background-color: #F3F3F3;
-    bottom : 0;
-    flex-direction: row;
-    padding: 1em;
-    position : fixed;
-    width: 100%;
-}
-
-ol li {
-    padding: 0 0 2em 0;
-}
-
-ol li:nth-of-type(2n) {
-    text-align: right;
-}
-
 li > p {
-    background-color: lightgray;
-    background-color: #F3F3F3;
     display:inline-block;
     padding: 0.6em;
 }
@@ -78,16 +105,8 @@ li > footer {
     padding: 1em 0 0 0;
 }
 
-label[for="field-message"] {
+label[for="field-message"], label[for^="rating-"] input {
     display: none;
-}
-
-li > p, textarea, button, input {
-    border-radius: 0.5em;
-}
-
-fieldset, textarea {
-    border: none;
 }
 
 textarea {
@@ -97,38 +116,25 @@ textarea {
 }
 
 button {
+    background-color: cadetblue;
     background-color: #297373;
-    border: none;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    color: white;
     font-family: 'AniTypeWriter';
     font-size: 110%;
     padding: 0.4em;
     width: 20%;
 }
 
-input[type="email"], input[type="password"], a + button, a {
-    margin: 0.5em 0 0.5em 0;
-}
-
-nav a {
+body ul a {
     font-size: 130%;
     text-decoration: none;
-}
-
-nav a {
     border-bottom: 1px dashed #39393A;
     display: block;
     padding: 0.3em 0 0.3em 0;
 }
 
-a {
-    color: orange;
-    color: #FF8552;
-}
-
-a:visited {
+a, a:visited  {
     color: orange;
     color: #FF8552;
 }
@@ -148,12 +154,6 @@ h1 + form:nth-of-type(1) {
     flex-direction: column;
 }
 
-input[type="email"], input[type="password"] {
-    border: none;
-    border-radius: 0.5em;
-    height: 2.2em;
-}
-
 label[for="field-stay-logged-in"]{
     display: inline;
 }
@@ -171,14 +171,34 @@ img[alt="A drawing of a colorful monster on a newspaper"]{
 }
 
 svg {
-    width: 1em;
+    width: 8em;
 }
 
 fieldset {
     background-color: white;
-    margin: 1em;
+    height: 26em;
+    left: 50%;
+    margin-top: -13em;
+    margin-left: -11em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 22em;
 }
 
-legend {
-    padding-bottom: 2em;
+label[for^="rating-"] {
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.3em;
+    width: 45%;
+}
+
+nav ol li {
+    margin-bottom: 1em;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
