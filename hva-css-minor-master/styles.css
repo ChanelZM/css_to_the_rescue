@@ -1,43 +1,68 @@
 /* Food#1: #E9D758 #297373 #FF8552 #F3F3F3 #39393A */
+
 @font-face {
     font-family: 'AniTypewriter';
     src: url('../font/AniTypewriter.ttf');
     src: local('AniTypewriter');
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset, nav ol li, ol + form {
-    padding: 1em; 
+nav > ul,
+ol,
+h1 + form:nth-of-type(1),
+article p,
+fieldset,
+nav ol li,
+ol + form {
+    padding: 1em;
 }
 
-li > p, textarea, button, input, fieldset, label[for^="rating-"], nav ol li {
+li > p,
+textarea,
+button,
+input,
+fieldset,
+label[for^="rating-"],
+nav ol li,  h1 + form  {
     border-radius: 0.5em;
 }
 
-fieldset, textarea, button, nav ol li a {
+fieldset,
+textarea,
+button,
+nav ol li a,
+input[type="email"],
+input[type="password"] {
     border: none;
 }
 
-body, nav a, legend {
+body,
+nav a,
+legend {
     color: black;
     color: #39393A;
 }
 
-input[type="email"], input[type="password"], a + button, a {
+input[type="email"],
+input[type="password"],
+a + button,
+a {
     margin: 0.5em 0 0.5em 0;
 }
 
-input[type="email"], input[type="password"] {
-    border: none;
+input[type="email"],
+input[type="password"] {
     border-radius: 0.5em;
     height: 2.2em;
 }
 
-body, body > ol a {
+body,
+body > ol a {
     font-size: 80%;
 }
 
@@ -45,21 +70,30 @@ nav a {
     text-decoration: none;
 }
 
-h1, button {
+h1,
+button {
     color: white;
 }
 
-h1, legend {
+h1,
+legend {
     font-family: 'AniTypeWriter', serif;
     font-size: 1.5rem;
 }
 
-ol + form, li > p, label[for^="rating-"], nav ol li {
+ol + form,
+li > p,
+label[for^="rating-"],
+nav ol li {
     background-color: lightgray;
     background-color: #F3F3F3;
 }
 
-/*body >*/ ol, ul {
+
+/*body >*/
+
+ol,
+ul {
     list-style: none;
 }
 
@@ -68,9 +102,8 @@ body > ol li {
 }
 
 ol + form {
-    bottom : 0;
-    flex-direction: row;
-    position : fixed;
+    bottom: 0;
+    position: absolute;
     width: 100%;
 }
 
@@ -82,20 +115,24 @@ h1 {
     background-color: black;
     background-color: #39393A;
     padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    width: 100%;
 }
 
 body {
-    background-color: darkkhaki;
+    background-color: lightblue;
     background-color: #E9D758;
     font-family: Helvetica, sans-serif;
 }
 
-form {
+form,
+article,
+figure,
+ol + form {
     display: flex;
 }
 
 li > p {
-    display:inline-block;
+    display: inline-block;
     padding: 0.6em;
 }
 
@@ -105,7 +142,8 @@ li > footer {
     padding: 1em 0 0 0;
 }
 
-label[for="field-message"], label[for^="rating-"] input {
+label[for="field-message"],
+label[for^="rating-"] input {
     display: none;
 }
 
@@ -126,18 +164,27 @@ button {
     width: 20%;
 }
 
+p {
+    line-height: 1.6;
+}
+
+nav ol li,
+body ul a {
+    border-bottom: 1px dashed #39393A;
+}
+
 body ul a {
     font-size: 130%;
     text-decoration: none;
-    border-bottom: 1px dashed #39393A;
     display: block;
     padding: 0.3em 0 0.3em 0;
 }
 
-a, a:visited  {
-    color: orange;
-    color: #FF8552;
+a,
+a:visited {
+    color: black;
 }
+
 
 /*a:hover {
     color: black;
@@ -154,31 +201,37 @@ h1 + form:nth-of-type(1) {
     flex-direction: column;
 }
 
-label[for="field-stay-logged-in"]{
+label[for="field-stay-logged-in"] {
     display: inline;
+    padding-top: 0.5em;
 }
 
-li ul li {
+li ul li,
+footer,
+img[alt="A colorful crayon drawing on the hood of a car."],
+img[alt="A drawing of a colorful monster on a newspaper"] {
     padding-left: 1em;
 }
 
-article {
-    width: min-content;
-} 
-
-img[alt="A drawing of a colorful monster on a newspaper"]{
-    width: 100vw;
+article,
+figure {
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 svg {
     width: 8em;
 }
 
+legend {
+    padding-top: 2em;
+}
+
 fieldset {
     background-color: white;
-    height: 26em;
+    height: 30em;
     left: 50%;
-    margin-top: -13em;
+    margin-top: -15em;
     margin-left: -11em;
     position: absolute;
     text-align: center;
@@ -197,8 +250,74 @@ nav ol li {
     margin-bottom: 1em;
 }
 
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
 progress[value]::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#ratingblur {
+    background-image: url('jpg/pmx9bkddr_a-kelsey-johnsen.jpg');
+    background-size: cover;
+    filter: blur(2px) contrast(.8) brightness(.7);
+}
+
+img[alt="A colorful crayon drawing on the hood of a car."],
+img[alt="A drawing of a colorful monster on a newspaper"] {
+    padding-top: 1em;
+    width: 40%;
+}
+
+img[alt="A colorful crayon drawing on the hood of a car."] {
+    height: 40%;
+}
+
+img[alt="A drawing of a colorful monster on a newspaper"] {
+    height: 100%;
+}
+
+img + p,
+figcaption {
+    width: 60%;
+}
+
+body > ol, nav {
+    max-width: 48em;
+}
+
+h1 + form {
+    max-width: 25em;
+}
+
+body > ol, form {
+    margin: auto;
+}
+
+@media screen and (min-width: 39em) {
+    a,
+    a:visited {
+        color: orange;
+        color: #FF8552;
+    }
+    h1 + form {
+        background-color: lightgray;
+        background-color: #F3F3F3;
+        margin-top: 1em;
+    }
+    ol + form {
+        max-width: 48em;
+    }
+    ol + form {
+        left: 50%;
+        margin-left: calc(-48em /2);
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
 }
