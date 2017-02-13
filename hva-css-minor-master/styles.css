@@ -37,6 +37,7 @@ h1 {
 }
 
 form {
+    display: flex;
     margin: auto;
 }
 
@@ -73,10 +74,6 @@ ol, ul {
     margin: 0;
 } 
 
-form, article, figure, ol + form {
-    display: flex;
-}
-
 a, a:visited {
     color: black;
 }
@@ -92,6 +89,7 @@ ol + form {
     background-color: lightgray;
     background-color: #F3F3F3;
     bottom: 0;
+    display: flex;
     position: absolute;
     width: 100%;
 }
@@ -185,28 +183,14 @@ li ul li {
 /* MEDIA ITEM & PICTURE-WITH-SUBTITLE */
 img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"],
 img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
-    padding-left: 1em;
-    padding-top: 1em;
-    width: 40%;
+    float: left;
+    width: 50%;
+    padding: 1em;
 }
 
-img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"] {
-    height: 40%;
-}
-
-img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
-    height: 100%;
-}
-
-article, figure {
-    flex-direction: row;
-    flex-wrap: wrap;
+article, figure { 
     margin: 0;
-}
-
-img + p,
-figcaption {
-    width: 60%;
+    max-width: 45em;
 }
 
 /* RATING */
@@ -294,5 +278,29 @@ nav {
     
     nav ul li {
         display: inline-block;
+    }
+    
+    figure {
+        left: 50%;
+        margin-left: -22.5em;
+        position: absolute;
+    }
+    
+    article {
+        left: 50%;
+        margin-left: -22.5em;
+        position: absolute;
+    }
+    
+    article > h1 {
+        background: none;
+        display: inline;
+        margin-bottom: 1em;
+        width: 45em;
+    }
+    
+    article a {
+        color: black;
+        color: #39393A;
     }
 }
