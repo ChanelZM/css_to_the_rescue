@@ -6,102 +6,90 @@
     src: local('AniTypewriter');
 }
 
+/* ALGEMEEN */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-nav > ul,
-ol,
-h1 + form:nth-of-type(1),
-article p,
-fieldset,
-nav ol li,
-ol + form {
+body {
+    background-color: lightblue;
+    background-color: #E9D758;
+    color: black;
+    color: #39393A;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    background-color: black;
+    background-color: #39393A;
+    color: white;
+    font-family: 'AniTypeWriter', serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+    width: 100vw;
+}
+
+form {
+    margin: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset, nav ol li, ol + form {
     padding: 1em;
 }
 
-li > p,
-textarea,
-button,
-input,
-fieldset,
-label[for^="rating-"],
-nav ol li,  h1 + form  {
+li > p, textarea, button, input, fieldset, label[for^="rating-"], nav ol li,  h1 + form  {
     border-radius: 0.5em;
 }
 
-fieldset,
-textarea,
-button,
-nav ol li a,
-input[type="email"],
-input[type="password"] {
+fieldset, textarea, button, nav ol li a, input[type="email"], input[type="password"] {
     border: none;
 }
 
-body,
-nav a,
-legend {
+button {
+    background-color: cadetblue;
+    background-color: #297373;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: white;
+    font-family: 'AniTypeWriter';
+    font-size: 110%;
+    padding: 0.4em;
+    width: 20%;
+}
+
+ol, ul {
+    list-style: none;
+} 
+
+form, article, figure, ol + form {
+    display: flex;
+}
+
+a, a:visited {
     color: black;
-    color: #39393A;
 }
 
-input[type="email"],
-input[type="password"],
-a + button,
-a {
-    margin: 0.5em 0 0.5em 0;
-}
 
-input[type="email"],
-input[type="password"] {
-    border-radius: 0.5em;
-    height: 2.2em;
-}
-
+/* CHAT */
 body,
 body > ol a {
     font-size: 80%;
 }
 
-nav a {
-    text-decoration: none;
-}
-
-h1,
-button {
-    color: white;
-}
-
-h1,
-legend {
-    font-family: 'AniTypeWriter', serif;
-    font-size: 1.5rem;
-}
-
-ol + form,
-li > p,
-label[for^="rating-"],
-nav ol li {
+ol + form {
     background-color: lightgray;
     background-color: #F3F3F3;
-}
-
-
-/*body >*/
-
-ol,
-ul {
-    list-style: none;
-}
-
-body > ol li {
-    padding: 0 0 2em 0;
-}
-
-ol + form {
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -109,26 +97,6 @@ ol + form {
 
 body > ol li:nth-of-type(2n) {
     text-align: right;
-}
-
-h1 {
-    background-color: black;
-    background-color: #39393A;
-    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
-    width: 100%;
-}
-
-body {
-    background-color: lightblue;
-    background-color: #E9D758;
-    font-family: Helvetica, sans-serif;
-}
-
-form,
-article,
-figure,
-ol + form {
-    display: flex;
 }
 
 li > p {
@@ -142,54 +110,27 @@ li > footer {
     padding: 1em 0 0 0;
 }
 
-label[for="field-message"],
-label[for^="rating-"] input {
-    display: none;
-}
-
 textarea {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     width: 80%;
 }
-
-button {
-    background-color: cadetblue;
-    background-color: #297373;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    font-family: 'AniTypeWriter';
-    font-size: 110%;
-    padding: 0.4em;
-    width: 20%;
+ footer {
+    padding-left: 1em;
 }
 
-p {
-    line-height: 1.6;
+body > ol {
+    margin: auto;
+    max-width: 48em;
 }
 
-nav ol li,
-body ul a {
-    border-bottom: 1px dashed #39393A;
+/* LOGIN */
+input[type="email"],
+input[type="password"],
+a + button,
+a {
+    margin: 0.5em 0;
 }
-
-body ul a {
-    font-size: 130%;
-    text-decoration: none;
-    display: block;
-    padding: 0.3em 0 0.3em 0;
-}
-
-a,
-a:visited {
-    color: black;
-}
-
-
-/*a:hover {
-    color: black;
-    color: #39393A;
-}*/
 
 a + button {
     border-bottom-left-radius: 0.5em;
@@ -197,8 +138,24 @@ a + button {
     width: 100%;
 }
 
-h1 + form:nth-of-type(1) {
+input[type="email"],
+input[type="password"] {
+    border-radius: 0.5em;
+    height: 2.2em;
+}
+
+h1 + form {
     flex-direction: column;
+    max-width: 25em;
+}
+
+li > p {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+}
+
+body > ol li {
+    padding: 0 0 2em 0;
 }
 
 label[for="field-stay-logged-in"] {
@@ -206,59 +163,85 @@ label[for="field-stay-logged-in"] {
     padding-top: 0.5em;
 }
 
-li ul li,
-footer,
-img[alt="A colorful crayon drawing on the hood of a car."],
-img[alt="A drawing of a colorful monster on a newspaper"] {
+/* NAVIGATION */
+nav a {
+    color: inherit;
+    text-decoration: none
+}
+
+ul a {
+    border-bottom: 1px dashed #39393A;
+    display: block;
+    font-size: 130%;
+    padding: 0.3em 0;
+    text-decoration: none;
+}
+
+li ul li {
     padding-left: 1em;
 }
 
-article,
-figure {
+/* MEDIA ITEM & PICTURE-WITH-SUBTITLE */
+img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"],
+img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
+    padding-left: 1em;
+    padding-top: 1em;
+    width: 40%;
+}
+
+img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"] {
+    height: 40%;
+}
+
+img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
+    height: 100%;
+}
+
+article, figure {
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-svg {
-    width: 8em;
+img + p,
+figcaption {
+    width: 60%;
 }
 
-legend {
-    padding-top: 2em;
-}
-
-fieldset {
-    background-color: white;
-    height: 30em;
-    left: 50%;
-    margin-top: -15em;
-    margin-left: -11em;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 22em;
-}
-
+/* RATING */
 label[for^="rating-"] {
+    background-color: lightgray;
+    background-color: #F3F3F3;
     display: inline-block;
     margin: 0.2em;
     padding: 0.3em;
     width: 45%;
 }
 
-nav ol li {
-    margin-bottom: 1em;
+label[for="field-message"],
+label[for^="rating-"] input {
+    display: none;
 }
 
-main {
-    width: 100vw;
-    height: 100vh;
+legend {
+    font-family: 'AniTypeWriter', serif;
+    font-size: 1.5rem;
+    padding-top: 2em;
 }
 
-progress[value]::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+svg {
+    width: 8em;
+}
+
+fieldset {
+    background-color: white;
+    height: 30em;
+    left: 50%;
+    margin-left: -11em;
+    margin-top: -15em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 22em;
 }
 
 #ratingblur {
@@ -267,36 +250,28 @@ progress[value]::-webkit-progress-bar {
     filter: blur(2px) contrast(.8) brightness(.7);
 }
 
-img[alt="A colorful crayon drawing on the hood of a car."],
-img[alt="A drawing of a colorful monster on a newspaper"] {
-    padding-top: 1em;
-    width: 40%;
+.background {
+    background-color: cadetblue !important;
+    background-color: #297373 !important;
+    color: white;    
 }
 
-img[alt="A colorful crayon drawing on the hood of a car."] {
-    height: 40%;
+/* STEP-INDICATOR */
+nav ol li {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    border-bottom: 1px dashed #39393A;
+    margin-bottom: 1em;
 }
 
-img[alt="A drawing of a colorful monster on a newspaper"] {
-    height: 100%;
-}
-
-img + p,
-figcaption {
-    width: 60%;
-}
-
-body > ol, nav {
+nav {
     max-width: 48em;
 }
 
-h1 + form {
-    max-width: 25em;
-}
-
-body > ol, form {
-    margin: auto;
-}
+/*a:hover {
+    color: black;
+    color: #39393A;
+}*/
 
 @media screen and (min-width: 39em) {
     a,
@@ -310,11 +285,9 @@ body > ol, form {
         margin-top: 1em;
     }
     ol + form {
-        max-width: 48em;
-    }
-    ol + form {
         left: 50%;
         margin-left: calc(-48em /2);
+        max-width: 48em;
     }
     
     nav ul li {
