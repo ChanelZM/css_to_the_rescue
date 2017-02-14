@@ -1,0 +1,341 @@
+/* Food#1: #E9D758 #297373 #FF8552 #F3F3F3 #39393A */
+
+@font-face {
+    font-family: 'AniTypewriter';
+    src: url('../font/AniTypewriter.ttf');
+    src: local('AniTypewriter');
+}
+
+/* ALGEMEEN */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    background-color: #E9D758;
+    color: black;
+    color: #39393A;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    background-color: black;
+    background-color: #39393A;
+    color: white;
+    font-family: 'AniTypeWriter', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.5rem 0.8rem;
+    width: 100vw;
+}
+
+form {
+    display: flex;
+    margin: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+nav > ul, ol, h1 + form:nth-of-type(1), article p, fieldset, nav ol li, ol + form {
+    padding: 1em;
+}
+
+li > p, textarea, button, input, fieldset, label[for^="rating-"], nav ol li,  h1 + form  {
+    border-radius: 0.5em;
+}
+
+fieldset, textarea, button, nav ol li a, input[type="email"], input[type="password"] {
+    border: none;
+}
+
+button {
+    background-color: cadetblue;
+    background-color: #297373;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: white;
+    font-family: 'AniTypeWriter';
+    font-size: 110%;
+    padding: 0.4em;
+    width: 20%;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+} 
+
+a, a:visited {
+    color: black;
+}
+
+
+/* CHAT */
+body,
+body > ol a {
+    font-size: 80%;
+}
+
+ol + form {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+body > ol li:nth-of-type(2n) {
+    text-align: right;
+}
+
+li > p {
+    display: inline-block;
+    padding: 0.6em;
+}
+
+li > footer {
+    font-size: 70%;
+    font-style: italic;
+    padding: 1em 0 0 0;
+}
+
+textarea {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    width: 80%;
+}
+ footer {
+    padding-left: 1em;
+}
+
+body > ol {
+    margin: auto;
+    max-width: 48em;
+}
+
+/* LOGIN */
+input[type="email"],
+input[type="password"],
+a + button,
+a {
+    margin: 0.5em 0;
+}
+
+a + button {
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+    border-radius: 0.5em;
+    height: 2.2em;
+}
+
+h1 + form {
+    flex-direction: column;
+    max-width: 25em;
+}
+
+li > p {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+}
+
+body > ol li {
+    padding: 0 0 2em 0;
+}
+
+label[for="field-stay-logged-in"] {
+    display: inline;
+    padding-top: 0.5em;
+}
+
+/* NAVIGATION */
+nav a {
+    color: inherit;
+    text-decoration: none
+}
+
+ul a {
+    border-bottom: 1px dashed #39393A;
+    display: block;
+    font-size: 130%;
+    padding: 0.3em 0;
+    text-decoration: none;
+}
+
+nav.menu {
+    max-width: 48em;
+}
+
+li ul li {
+    padding-left: 1em;
+}
+
+/* MEDIA ITEM & PICTURE-WITH-SUBTITLE */
+img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"],
+img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
+    float: left;
+    width: 50%;
+    padding: 1em;
+}
+
+article, figure { 
+    margin: 0;
+    max-width: 45em;
+}
+
+/* RATING */
+label[for^="rating-"] {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.3em;
+    width: 45%;
+}
+
+label[for="field-message"],
+label[for^="rating-"] input {
+    display: none;
+}
+
+legend {
+    font-family: 'AniTypeWriter', serif;
+    font-size: 1.5rem;
+    padding-top: 2em;
+}
+
+svg {
+    width: 8em;
+}
+
+fieldset {
+    background-color: white;
+    height: 30em;
+    left: 50%;
+    margin-left: -11em;
+    margin-top: -15em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 22em;
+}
+
+#ratingblur {
+    background-image: url('jpg/pmx9bkddr_a-kelsey-johnsen.jpg');
+    background-size: cover;
+    filter: blur(2px) contrast(.8) brightness(.7);
+}
+
+.background {
+    background-color: cadetblue !important;
+    background-color: #297373 !important;
+    color: white;    
+}
+
+/* STEP-INDICATOR */
+nav ol li {
+    background-color: lightgray;
+    background-color: #F3F3F3;
+    border-bottom: 1px dashed #39393A;
+    margin-bottom: 1em;
+}
+
+progress {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+/*a:hover {
+    color: black;
+    color: #39393A;
+}*/
+
+@media screen and (min-width: 39em) {
+    a,
+    a:visited {
+        color: orange;
+        color: #FF8552;
+    }
+    h1 + form {
+        background-color: lightgray;
+        background-color: #F3F3F3;
+        margin-top: 1em;
+    }
+    ol + form {
+        left: 50%;
+        margin-left: calc(-48em /2);
+        max-width: 48em;
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    
+    figure {
+        left: 50%;
+        margin-left: -22.5em;
+        position: absolute;
+    }
+    
+    article {
+        left: 50%;
+        margin-left: -22.5em;
+        position: absolute;
+    }
+    
+    article > h1 {
+        background: none;
+        display: inline;
+        margin-bottom: 1em;
+        width: 45em;
+    }
+    
+    article a {
+        color: black;
+        color: #39393A;
+    }
+
+    progress {
+        width: 97%;
+    }
+    progress + ol > li {
+        display: inline-block;
+        width: 24.5%;
+    }
+    
+    progress + ol {
+        margin: auto;
+        max-width: 90em;
+    }
+    
+}
+
+@media screen and (min-width: 57em) {
+    progress + ol > li {
+        width: 24.7%;
+    }
+}
+
+@media screen and (min-width: 72em) {
+    progress {
+        left: 50%;
+        margin: auto;
+        margin-left: -44em;
+        position: absolute;
+        width: 88em;
+    }
+}
