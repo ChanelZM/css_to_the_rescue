@@ -7,10 +7,6 @@
 }
 
 /* ALGEMEEN */
-/** {
-    box-sizing: border-box;
-}*/
-
 body {
     background-color: lightblue;
     background-color: #E9D758;
@@ -77,7 +73,6 @@ li > p, textarea, button, input, fieldset, label[for^="rating-"], nav ol li,  h1
 fieldset, textarea, button, nav ol li a, input[type="email"], input[type="password"] {
     border: none;
 }
-
 
 /* CHAT */
 body,
@@ -198,7 +193,7 @@ img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-
 article, figure { 
     margin: 0;
     max-width: 45em;
-}
+}*
 
 /* RATING */
 label[for^="rating-"] {
