@@ -14,6 +14,7 @@ body {
     color: #39393A;
     font-family: Helvetica, sans-serif;
     margin: 0;
+    transition: background-color 400ms ease;
 }
 
 main {
@@ -187,6 +188,18 @@ input[type="password"] {
     height: 2.2em;
 }
 
+input[type="email"]:valid:focus,
+input[type="password"]:valid:focus {
+    color: cadetblue;
+    color: #297373;
+}
+
+input[type="email"]:invalid:focus,
+input[type="password"]:invalid:focus {
+    color: orange;
+    color: #FF8552;
+}
+
 h1 + form {
     flex-direction: column;
     max-width: 25em;
@@ -242,11 +255,9 @@ li ul li {
 }
 
 /* MEDIA ITEM & PICTURE-WITH-SUBTITLE */
-img[src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg"],
-img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
+article > img {
     float: left;
     margin-top: 1.2em;
-    max-width: 13em;
     padding: 1em;
 }
 
@@ -265,12 +276,20 @@ article {
 }
 
 figure {
-    height: 19.3em;
     margin: 0;
 }
 
+figure img {
+    width: 100vw;
+}
+
 article h1 {
+    background: none;
+    color: black;
+    color: #39393A; 
+    opacity: 1;
     padding: 0.5em 0.5em 0 0.5em;
+    transition: opacity 400ms ease;
     width: inherit;
 }
 
@@ -292,8 +311,37 @@ article h1 a::after {
     top: 0;
 }
 
-article p {
+article > p {
     border-top: 1px solid #39393A;
+}
+
+figcaption {
+    opacity: 1;
+    transition: opacity 400ms ease;
+}
+
+figcaption p {
+    padding-top: 0;
+}
+
+.figure {
+    background-color: transparent;
+    margin: 0;
+    position: absolute;
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.colorchange {
+    background-color: black;
+    background-color: #39393A;
+}
+
+.picturewithsubtitle {
+    display: flex;
+    justify-content: center;
 }
 
 /* RATING */
@@ -393,6 +441,16 @@ progress + ol {
     to {background-position: -1800px 0;}
 }
 
+@media screen and (min-width: 20em) {
+    article > img {
+        max-width: 40%;
+    }
+    
+    article footer {
+        margin-top: 1rem;
+    }
+}
+
 @media screen and (min-width: 39em) {
     /* LOGIN*/
     h1 + form {
@@ -447,18 +505,44 @@ progress + ol {
     
     /* MEDIA ITEM */
     article {
-        left: 50%;
-        margin-left: -22.5em;
         position: absolute;
-    }
-    
-    article > h1 {
-        background: none;
     }
  
     article a {
         color: black;
         color: #39393A;
+    }
+    
+    /* PICTURE WITH SUBTITLE */
+    .figure img {
+        height: 100vh;
+        width: auto;
+    }
+    
+    .figure h1 {
+        color: white;
+        position: absolute;
+        text-shadow: 1px 1px 1px #555555;
+    }
+    
+    figcaption {
+        color: white;
+        bottom: 1em;
+        position: absolute;
+        text-shadow: 1px 1px 1px #555555;
+    }
+    
+    figcaption footer {
+        text-shadow: inherit;
+    }
+    
+    figcaption a, figcaption a:visited {
+        color: white;
+    }
+    
+    figcaption a:hover {
+        color: orange;
+        color: #FF8552;
     }
     
     /* STEP INDICATOR */
