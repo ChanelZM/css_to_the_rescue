@@ -459,6 +459,27 @@ progress + ol {
     width: 100px;
 }
 
+/* LANDINGPAGE*/
+.landingpagenav {
+    font-family: 'Anitypewriter';
+    font-size: 1.5em;
+    height: 2em;
+    left: 50%;
+    margin-left: -25em;
+    margin-top: -1em;
+    position: absolute;
+    top: 50%;
+    width: 50em;
+}
+
+.landingpagenav a {
+    text-decoration: none;
+}
+
+.landingpagenav a + a {
+    padding-left: 2rem;
+}
+
 @keyframes loader {
     to {background-position: -1800px 0;}
 }
