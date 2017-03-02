@@ -370,10 +370,12 @@ fieldset {
     background-color: white;
     box-sizing: border-box;
     height: 30em;
-    left: calc(50% - 11.5em);
+    left: 50%;
+    margin-left: -11.5em;
+    margin-top: -15em;
     position: absolute;
     text-align: center;
-    top: calc(50% - 15em);
+    top: 50%;
     width: 23em;
 }
 
