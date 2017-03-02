@@ -118,16 +118,16 @@ ol + form {
     width: 100%;
 }
 
-.postedbyme {
-    text-align: right;
-}
-
 li > p {
     background-color: lightgray;
     background-color: #F3F3F3;
     display: inline-block;
     margin: 0;
     padding: 0.6em;
+}
+
+.postedbyme {
+    text-align: right;
 }
 
 li > footer {
@@ -149,11 +149,12 @@ textarea {
 textarea + button {
     border-radius: 0 0.5em 0.5em 0;
 }
+
 footer {
     padding-left: 1em;
 }
 
-body > ol li:nth-of-type(2n) footer {
+.postedbyme footer {
     padding-left: 0;
     padding-right: 1em;
 }
@@ -164,6 +165,11 @@ body > ol {
 }
 
 /* LOGIN */
+h1 + form {
+    flex-direction: column;
+    max-width: 25em;
+}
+
 input[type="email"],
 input[type="password"],
 a + button,
@@ -193,11 +199,6 @@ input[type="email"]:invalid:focus,
 input[type="password"]:invalid:focus {
     color: orange;
     color: #FF8552;
-}
-
-h1 + form {
-    flex-direction: column;
-    max-width: 25em;
 }
 
 body > ol li {
@@ -249,21 +250,6 @@ li ul li {
 }
 
 /* MEDIA ITEM & PICTURE-WITH-SUBTITLE */
-article > img {
-    float: left;
-    margin-top: 1.2em;
-    padding: 1em;
-}
-
-img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg"] {
-    margin-top: 0;
-}
-
-.media-item {
-    left: 50%;
-    margin-left: -22.5em;
-}
-
 article {
     background-color: lightgray;
     background-color: #F3F3F3;
@@ -274,12 +260,9 @@ article {
     position: relative;
 }
 
-figure {
-    margin: 0;
-}
-
-figure img {
-    width: 100vw;
+.media-item {
+    left: 50%;
+    margin-left: -22.5em;
 }
 
 article h1 {
@@ -292,16 +275,30 @@ article h1 {
     width: inherit;
 }
 
-article h1 a {
+article > img {
+    float: left;
+    margin-top: 1.2em;
+    padding: 1em;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100vw;
+}
+
+.media-item a {
     text-decoration: none;
 }
 
-article h1 a:hover {
+.media-item a:hover {
     color: black;
     color: #39393A;
 }
 
-article h1 a::after {
+.media-item a::after {
     bottom: 0;
     content: "";
     left: 0;
@@ -310,7 +307,7 @@ article h1 a::after {
     top: 0;
 }
 
-article > p {
+.media-item p {
     border-top: 1px solid #39393A;
 }
 
