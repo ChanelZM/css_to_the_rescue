@@ -193,12 +193,14 @@ input[type="email"]:valid:focus,
 input[type="password"]:valid:focus {
     background-color: #c7ebeb;
     border-radius: 0.5em;
+    transition: background-color 300ms ease;
 }
 
 input[type="email"]:invalid:focus,
 input[type="password"]:invalid:focus {
     background-color: #ffdbcc;
     border-radius: 0.5em;
+    transition: background-color 300ms ease;
 }
 
 body > ol li {
