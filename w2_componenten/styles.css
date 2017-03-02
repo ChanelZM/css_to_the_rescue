@@ -17,11 +17,6 @@ body {
     transition: background-color 400ms ease;
 }
 
-main {
-    height: 100vh;
-    width: 100vw;
-}
-
 h1 {
     background-color: black;
     background-color: #39393A;
@@ -392,6 +387,8 @@ fieldset {
     background-image: url('jpg/pmx9bkddr_a-kelsey-johnsen.jpg');
     background-size: cover;
     filter: blur(2px) contrast(.8) brightness(.7);
+    height: 100vh;
+    width: 100vw;
 }
 
 /* STEP-INDICATOR */
