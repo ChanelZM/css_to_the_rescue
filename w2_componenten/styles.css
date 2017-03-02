@@ -259,6 +259,11 @@ img[src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-
     margin-top: 0;
 }
 
+.media-item {
+    left: 50%;
+    margin-left: -22.5em;
+}
+
 article {
     background-color: lightgray;
     background-color: #F3F3F3;
