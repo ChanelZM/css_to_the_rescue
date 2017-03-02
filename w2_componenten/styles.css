@@ -398,12 +398,34 @@ nav ol li {
     background-color: lightgray;
     background-color: #F3F3F3;
     border-bottom: 1px dashed #39393A;
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
 }
 
 progress {
-    margin-left: 1em;
-    margin-top: 1em;
+    height: 20px;
+    margin: 1em 0 1em 1em;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    border-radius: 3px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25) inset;
+    background-color: white;
+}
+
+progress[value]::-webkit-progress-value {
+    background: #3da9a9; 
+    background-image:
+            linear-gradient(90deg, #297373 13px, transparent 0),
+            linear-gradient(90deg, #2f8383 17px, transparent 0),
+            linear-gradient(90deg, #369696 19px, transparent 0);
+        background-size: 41px 100%, 61px 100%, 83px 100%;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25) inset;
 }
 
 progress + ol {
@@ -547,7 +569,6 @@ progress + ol {
     /* STEP INDICATOR */
     progress {
         left: 50%;
-        margin: auto;
         margin-left: -45em;
         position: absolute;
         width: 90em;
@@ -567,5 +588,8 @@ progress + ol {
         color: black;
         color: #39393A;
         text-decoration: none;
+    }
+    nav ol li {
+        margin: 3em 0 1em 0;
     }
 }
