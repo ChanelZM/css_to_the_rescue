@@ -237,7 +237,6 @@ input[name="field-stay-logged-in"]:checked + label::before {
 
 /* NAVIGATION */
 .menu a {
-    color: inherit;
     text-decoration: none;
     transition: color 300ms;
 }
