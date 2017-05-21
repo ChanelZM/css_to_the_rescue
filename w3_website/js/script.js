@@ -3,13 +3,21 @@
 (function(){
     var elements = {
         menu : document.querySelector('.menu'),
-        menuButton : document.querySelector('.togglemenu')
+        menuButton : document.querySelector('.togglemenu'),
+        chat : document.querySelector('.chat'),
+        chatButton : document.querySelector('.togglechat'),
+        body : document.querySelector('body'),
+        main : document.querySelector('main'),
+        header : document.querySelector('header'),
+        closeChat : document.querySelector('.chat > button')
     };
 
     var app = {
         init: function(){
             elements.menu.classList.add('hide');
-            elements.menu.classList.add('menushow');
+            elements.menu.classList.add('showmenu');
+            elements.chat.classList.add('hide');
+            elements.chat.classList.add('showchat');
         }
     };
 
@@ -19,6 +27,22 @@
         } else {
             elements.menu.classList.add('hide');
         }
+    });
+
+    elements.chatButton.addEventListener('click', function(){
+        if(elements.chat.getAttribute('class').includes('hide') == true){
+            elements.chat.classList.remove('hide');
+            elements.body.style.overflow = 'hidden';
+            elements.main.classList.add('blur');
+            elements.header.classList.add('blur');
+        }
+
+        elements.closeChat.addEventListener('click', function(){
+            elements.body.style.overflow = 'initial';
+            elements.chat.classList.add('hide');
+            elements.main.classList.remove('blur');
+            elements.header.classList.remove('blur');
+        });
     });
 
     app.init();

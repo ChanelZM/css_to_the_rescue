@@ -22,9 +22,9 @@
         </nav>
         <form action="/" method="post">
             <label for="suname">Voornaam</label>
-            <input type="text" id="surname" name="surname" required autofocus>
+            <input type="text" id="surname" name="surname" pattern="[A-Za-z]{2,20}" title="Voer hier uw voornaam in" required autofocus>
             <label for="name">Achternaam</label>
-            <input type="text" id="name" name="name" required autofocus>
+            <input type="text" id="name" name="name" pattern="[A-Za-z]{2,30}" title="Voer hier uw achternaam in" required autofocus>
             <button type="submit">Aanmelden</button>
         </form>
     </section>
