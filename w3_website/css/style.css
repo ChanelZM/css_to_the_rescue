@@ -205,7 +205,7 @@ label[for^="rating-"]::after {
 }
 
 label[for^="rating-"] svg {
-    width: 1.5rem;
+    width: 2.5rem;
 }
 
 #rating-0:checked + label, #rating-1:checked + label, #rating-2:checked + label, #rating-3:checked + label {

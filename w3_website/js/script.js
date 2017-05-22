@@ -32,9 +32,13 @@
     elements.chatButton.addEventListener('click', function(){
         if(elements.chat.getAttribute('class').includes('hide') == true){
             elements.chat.classList.remove('hide');
-            elements.body.style.overflow = 'hidden';
             elements.main.classList.add('blur');
             elements.header.classList.add('blur');
+
+            elements.body.style.overflow = 'hidden';
+            elements.body.addEventListener('touchmove', function(e){
+                e.preventDefault();
+            })
         }
 
         elements.closeChat.addEventListener('click', function(){
