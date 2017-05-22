@@ -36,13 +36,16 @@
             elements.header.classList.add('blur');
 
             elements.body.style.overflow = 'hidden';
+            elements.body.style.position = 'fixed';
         }
 
         elements.closeChat.addEventListener('click', function(){
-            elements.body.style.overflow = 'initial';
             elements.chat.classList.add('hide');
             elements.main.classList.remove('blur');
             elements.header.classList.remove('blur');
+
+            elements.body.style.overflow = 'initial';
+            elements.body.style.position = 'relative';
         });
     });
 
