@@ -34,6 +34,7 @@
             elements.chat.classList.remove('hide');
             elements.main.classList.add('blur');
             elements.header.classList.add('blur');
+            elements.chatButton.classList.add('hide');
 
             elements.body.style.overflow = 'hidden';
             elements.body.style.position = 'fixed';
@@ -41,6 +42,7 @@
 
         elements.closeChat.addEventListener('click', function(){
             elements.chat.classList.add('hide');
+            elements.chatButton.classList.remove('hide');
             elements.main.classList.remove('blur');
             elements.header.classList.remove('blur');
 
