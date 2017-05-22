@@ -89,7 +89,7 @@ input[type="password"], input[type="email"], input[type="text"]{
     padding: 0;
 }
 
-.togglemenu:focus, button:focus {
+.togglemenu:focus, button:focus, .menu a:focus {
     outline-color: rgb(11,90,135);
 }
 
@@ -228,6 +228,11 @@ label[for^="rating-"] svg {
     top: 0.5rem;
 }
 
+.login label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
 .login input {
     margin-bottom: 1rem;
 }
@@ -248,8 +253,12 @@ input[type="checkbox"], input[type="radio"] {
     position: absolute;
 }
 
-a:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="text"]:focus, input[type="checkbox"]:focus + label, input[type="radio"]:focus + label  {
+a:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="text"]:focus, input[type="radio"]:focus + label  {
     outline-color: rgb(249,206,47);
+}
+
+input[type="checkbox"]:focus + label::before {
+    box-shadow: 3px 3px 5px rgb(249,206,47), -3px -3px 5px rgb(249,206,47), 3px -3px 5px rgb(249,206,47), -3px 3px 5px rgb(249,206,47);
 }
 
 label[for="field-stay-logged-in"] {
@@ -257,7 +266,7 @@ label[for="field-stay-logged-in"] {
     margin-bottom: 0.5rem;
 }
 
-input[name="field-stay-logged-in"] + label::before {
+input[type="checkbox"] + label::before {
     border: 2px solid rgb(24,157,198);
     content: '\a0';
     display: inline-block;
@@ -269,7 +278,7 @@ input[name="field-stay-logged-in"] + label::before {
     width: 0.8em;
 }
 
-input[name="field-stay-logged-in"]:checked + label::before {
+input[type="checkbox"]:checked + label::before {
     background-color: rgb(24,157,198);
     color: white;
     content:  '\2713';
@@ -280,13 +289,8 @@ button[type="submit"] {
     display: block;
     font-family: 'Merriweather', serif;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem 1.5rem;
-}
-.progress ol {
-    list-style: none;
-    margin: 0 0 0.5rem 0;
-    padding: 0;
 }
 
 input[type="email"]:valid:focus,
@@ -301,6 +305,79 @@ input[type="password"]:invalid:focus,
 input[type="text"]:invalid:focus {
     background-color: #ffdbcc;
     transition: background-color 300ms ease;
+}
+
+/* PROGRESS */
+progress {
+    width: 100%;
+}
+.progress ol {
+    display: flex;
+    list-style: none;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 0.5rem;
+}
+
+progress[value]::-webkit-progress-bar {
+    border: 2px solid rgb(24,157,198);
+    border-radius: 3px;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25) inset;*/
+    background-color: white;
+    height: 1.2rem;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: rgb(24,157,198);
+    border: 2px solid white;
+    border-radius: 3px;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25) inset;*/
+}
+
+.progress ol li {
+    /*background-color: rgb(241, 241, 241);*/
+    box-sizing: border-box;
+    font-size: 0.8em;
+    padding-left: 1.8rem;
+    position: relative;
+    margin-left: 0.5rem;
+    width: calc(100% / 3 - 0.33rem);
+}
+
+.progress ol li::before {
+    border-radius: 100%;
+    background-color: rgb(24,157,198);
+    content: '';
+    height: 25px;
+    position: absolute;
+    left: 0;
+    width: 25px;
+}
+
+.progress ol li::after {
+    color: white;
+    content: '';
+    height: 25px;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.2rem;
+}
+
+.progress ol li:nth-of-type(1)::after {
+    content: '1';
+}
+
+.progress ol li:nth-of-type(2)::after {
+    content: '2';
+}
+
+.progress ol li:nth-of-type(3)::after {
+    content: '3';
 }
 
 /* CHAT */
@@ -321,11 +398,11 @@ input[type="text"]:invalid:focus {
 
 .togglechat {
     position: fixed;
-    background-color: rgb(11,90,135);
+    background-color: rgb(249,206,47);
     border: none;
     border-radius: 0.5rem 0.5rem 0 0.5rem;
     bottom: 0.5rem;
-    color: white;
+    color: black;
     display: block;
     font-family: 'Abril Fatface', cursive;
     font-size: 1.3rem;
