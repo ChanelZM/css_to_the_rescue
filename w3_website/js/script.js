@@ -36,9 +36,6 @@
             elements.header.classList.add('blur');
 
             elements.body.style.overflow = 'hidden';
-            elements.main.addEventListener('touchmove', function(e){
-                e.preventDefault();
-            })
         }
 
         elements.closeChat.addEventListener('click', function(){
