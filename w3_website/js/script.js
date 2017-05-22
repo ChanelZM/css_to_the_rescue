@@ -36,7 +36,7 @@
             elements.header.classList.add('blur');
 
             elements.body.style.overflow = 'hidden';
-            elements.body.addEventListener('touchmove', function(e){
+            elements.main.addEventListener('touchmove', function(e){
                 e.preventDefault();
             })
         }
