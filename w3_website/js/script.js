@@ -9,7 +9,9 @@
         body : document.querySelector('body'),
         main : document.querySelector('main'),
         header : document.querySelector('header'),
-        closeChat : document.querySelector('.chat > button')
+        closeChat : document.querySelector('.chat > button'),
+        footer : document.querySelector('body > footer'),
+        overlayDiv : ''
     };
 
     var app = {
@@ -18,14 +20,26 @@
             elements.menu.classList.add('showmenu');
             elements.chat.classList.add('hide');
             elements.chat.classList.add('showchat');
+
+            createOverlayDiv();
         }
+    };
+
+    function createOverlayDiv(){
+        var div = document.createElement('DIV');
+        div.className = 'overlay hide';
+        elements.footer.insertAdjacentElement('beforebegin', div);
+
+        elements.overlayDiv = document.querySelector('.overlay');
     };
 
     elements.menuButton.addEventListener('click', function(){
         if(elements.menu.getAttribute('class').includes('hide') == true){
             elements.menu.classList.remove('hide');
+            elements.overlayDiv.classList.remove('hide');
         } else {
             elements.menu.classList.add('hide');
+            elements.overlayDiv.classList.add('hide');
         }
     });
 
