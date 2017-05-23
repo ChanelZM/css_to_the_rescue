@@ -561,6 +561,65 @@ figcaption p {
     padding: 0.5rem;
 }
 
+@media screen and (min-width: 23rem){
+    fieldset {
+        margin-left: auto;
+        margin-right: auto;
+        width: 19rem;
+    }
+
+    .media-item {
+        margin-left: auto;
+        margin-right: auto;
+        width: min-content;
+    }
+
+    .media-item img {
+        display: block;
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 32rem){
+    fieldset {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        /*width: fit-content;*/
+    }
+
+    legend {
+        top: 1.5rem;
+    }
+
+    .media-item {
+        margin: 0;
+        width: 100%;
+    }
+
+    .media-item img {
+        float: left;
+        margin: 0;
+        max-height: 8rem;
+        padding-left: 0.5rem;
+        width: auto;
+    }
+
+    .media-item p {
+        padding: 0 0.5rem 0.5rem 0.5rem;
+        height: 8rem;
+    }
+
+    label[for^="rating-"] {
+        margin: 0;
+        padding-top: 0;
+    }
+
+    label[for^="rating-"]:first-of-type {
+        margin-left: 4rem;
+    }
+}
+
 /*rgb(11,90,135)
 rgb(24,157,198)
 rgb(124,144,160)
