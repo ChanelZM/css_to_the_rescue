@@ -1,6 +1,5 @@
 @font-face {
     font-family: Ampersand;
-    /*src: local('Times New Roman');*/
     src: local('Baskerville');
     unicode-range: U+26;
 }
@@ -48,6 +47,10 @@ button {
     -webkit-appearance: none;
     background-color: rgb(249,206,47);
     border: none;
+}
+
+img {
+    width: 100%;
 }
 
 a, a:visited {
@@ -152,10 +155,6 @@ article footer {
 #main-content {
     background-color: rgb(242, 242, 242);
     padding-bottom: 4rem;
-}
-
-.media-item img {
-    width: 100%;
 }
 
 .media-item p {
@@ -539,6 +538,27 @@ label[for="field-message"] {
     left: -0.5rem;
     right: -0.5rem;
     bottom: -0.5rem;
+}
+
+/* PICTURE WITH SUBTITLE */
+figure {
+    box-shadow: 0 0 5px rgb(217, 217, 217);
+    background-color: white;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
+}
+
+figcaption {
+    font-size: 0.9em;
+}
+
+figcaption p {
+    font-style: italic;
+}
+
+.figure {
+    background-color: rgb(242, 242, 242);
+    padding: 0.5rem;
 }
 
 /*rgb(11,90,135)
