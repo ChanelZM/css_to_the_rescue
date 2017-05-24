@@ -69,7 +69,7 @@ a:hover, .menu a:hover {
     text-decoration: none;
 }
 
-h2 a, h2 a:visited, h3 a, h3 a:visited {
+.media-item h2 a, h2 a:visited, h3 a, h3 a:visited {
     color: rgb(24,157,198);
     text-decoration: none;
 }
