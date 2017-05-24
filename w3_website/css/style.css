@@ -609,6 +609,7 @@ figcaption p {
     .media-item {
         margin-left: auto;
         margin-right: auto;
+        width: -webkit-min-content;
         width: min-content;
     }
 
