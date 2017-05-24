@@ -20,7 +20,6 @@
             chatButton.classList.add('hide');
 
             body.style.overflow = 'hidden';
-            body.style.position = 'fixed';
         }
 
         closeChat.addEventListener('click', function(){
@@ -30,7 +29,6 @@
             header.classList.remove('blur');
 
             body.style.overflow = 'initial';
-            body.style.position = 'relative';
         });
     });
 

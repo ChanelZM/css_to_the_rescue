@@ -5,6 +5,7 @@
 }
 /* GLOBAL */
 body {
+    background-color: rgb(242, 242, 242);
     font-family: 'Merriweather', serif;
     margin: 0;
 }
@@ -56,7 +57,7 @@ img {
 a, a:visited {
     color: rgb(24,157,198);
 }
-a:hover {
+a:hover, .menu a:hover {
     background-color: rgb(24,157,198);
     color: white;
     text-decoration: none;
@@ -529,6 +530,7 @@ label[for="field-message"] {
     margin: 0;
     position: relative;
     padding: 0.2rem 0.4rem;
+    width: 20%;
 }
 
 .chat button[type="submit"]::after {
@@ -580,43 +582,70 @@ figcaption p {
     }
 }
 
-@media screen and (min-width: 32rem){
+@media screen and (min-width: 41rem){
     fieldset {
-        box-shadow: none;
-        margin: 0;
-        width: 100%;
-        /*width: fit-content;*/
-    }
-
-    legend {
-        top: 1.5rem;
+        width: 19rem;
     }
 
     .media-item {
-        margin: 0;
-        width: 100%;
+        width: min-content;
+    }
+
+    .showchat {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 41rem;
+        width: 22rem;
+    }
+
+    .chat form {
+        bottom: 0;
+        width: 22rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #main-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40.5rem;
+    }
+
+    #main-content div:nth-of-type(2n + 1){
+        margin-right: 0.5rem;
+    }
+    #main-content div:nth-of-type(2n){
+        margin-right: 0;
     }
 
     .media-item img {
-        float: left;
-        margin: 0;
-        max-height: 8rem;
-        padding-left: 0.5rem;
-        width: auto;
+        display: block;
+        height: auto;
+        width: 20rem;
+    }
+}
+
+@media screen and (min-width: 61rem){
+    #main-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 61rem;
     }
 
-    .media-item p {
-        padding: 0 0.5rem 0.5rem 0.5rem;
-        height: 8rem;
+    #main-content div:nth-of-type(3){
+        margin-right: 0;
     }
 
-    label[for^="rating-"] {
-        margin: 0;
-        padding-top: 0;
+    #main-content div:nth-of-type(3n + 1){
+        margin-right: 0.5rem;
     }
 
-    label[for^="rating-"]:first-of-type {
-        margin-left: 4rem;
+    #main-content div:nth-of-type(3n + 2){
+        margin-right: 0.5rem;
     }
 }
 
